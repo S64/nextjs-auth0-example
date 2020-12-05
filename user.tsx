@@ -38,7 +38,7 @@ export const UserProvider = (
   React.useEffect(() => {
     if (fetchedUser) {
       return
-    } else if (userContext.user) {
+    } else if (userContext && userContext.user) {
       setFetchedUser(userContext.user)
       return
     }
